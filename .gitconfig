@@ -1,2 +1,5 @@
 [init]
 	defaultBranch = main
+[user]
+	email = kurt@kwk.systems
+	name = Kurt Kremitzki
