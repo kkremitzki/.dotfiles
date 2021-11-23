@@ -111,3 +111,13 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+GIT_PS1_SHOWDIRTYSTATE=1
+GIT_PS1_SHOWSTASHSTATE=1
+GIT_PS1_SHOWUNTRACKEDFILES=1
+GIT_PS1_SHOWCOLORHINTS=1
+GIT_PS1_DESCRIBE_STYLE="branch"
+GIT_PS1_SHOWUPSTREAM="auto git"
+
+# Initialize direnv; must be at end
+eval "$(direnv hook bash)"
