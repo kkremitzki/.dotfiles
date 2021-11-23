@@ -1,5 +1,7 @@
 require('plugins')
 
+vim.cmd 'colorscheme slate'
+
 vim.cmd([[
   augroup packer_user_config
     autocmd!
