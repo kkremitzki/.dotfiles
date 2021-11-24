@@ -8,3 +8,6 @@ vim.cmd([[
     autocmd BufWritePost plugins.lua source <afile> | PackerCompile
   augroup end
 ]])
+
+vim.opt.expandtab = true
+vim.opt.shiftwidth = 4
