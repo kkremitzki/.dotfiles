@@ -9,6 +9,7 @@ return require('packer').startup(function(use)
   -- My plugins here
   use 'wbthomason/packer.nvim'
   use 'tpope/vim-fugitive'
+  use 'neovim/nvim-lspconfig'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
