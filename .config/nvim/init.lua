@@ -1,5 +1,8 @@
 require('plugins')
+require('langservers')
 
+-- TODO This is a suitable dark colorscheme; how can I use `morning`
+-- automatically when my terminal is in light mode?
 vim.cmd 'colorscheme slate'
 
 vim.cmd([[
@@ -11,3 +14,4 @@ vim.cmd([[
 
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
+vim.opt.completeopt = 'menu,menuone,noselect'
