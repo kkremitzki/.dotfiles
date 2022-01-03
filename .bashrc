@@ -119,5 +119,7 @@ GIT_PS1_SHOWCOLORHINTS=1
 GIT_PS1_DESCRIBE_STYLE="branch"
 GIT_PS1_SHOWUPSTREAM="auto git"
 
+[[ -z "$TMUX" ]] && command -v tmux && exec tmux
+
 # Initialize direnv; must be at end
 eval "$(direnv hook bash)"
