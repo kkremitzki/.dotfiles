@@ -11,3 +11,6 @@ Investigate setting of `TERM=screen-256color` in tmux config.
 Manpage says TERM "must" be `screen` or `tmux`.
 However, without this setting, my bash prompt coloration does not work.
 What is the correct solution?
+
+Find if there is a bash equivalent to zsh's automatic definition of `..`,
+`...`, etc.
