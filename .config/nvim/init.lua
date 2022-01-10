@@ -1,5 +1,6 @@
 require('plugins')
 require('langservers')
+require('treesitter-config')
 
 -- TODO This is a suitable dark colorscheme; how can I use `morning`
 -- automatically when my terminal is in light mode?
@@ -15,3 +16,7 @@ vim.cmd([[
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
 vim.opt.completeopt = 'menu,menuone,noselect'
+
+-- nvim-treesitter
+vim.opt.foldmethod = 'expr'
+vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
