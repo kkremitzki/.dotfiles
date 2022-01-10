@@ -18,6 +18,8 @@ vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
 vim.opt.completeopt = 'menu,menuone,noselect'
 
+vim.opt.ttimeoutlen = 20
+
 -- nvim-treesitter
 vim.opt.foldmethod = 'expr'
 vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
