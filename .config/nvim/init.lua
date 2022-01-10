@@ -1,6 +1,7 @@
 require('plugins')
 require('langservers')
 require('treesitter-config')
+require('mappings')
 
 -- TODO This is a suitable dark colorscheme; how can I use `morning`
 -- automatically when my terminal is in light mode?
