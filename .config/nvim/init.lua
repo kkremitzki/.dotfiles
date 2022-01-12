@@ -5,7 +5,7 @@ require('mappings')
 
 -- TODO This is a suitable dark colorscheme; how can I use `morning`
 -- automatically when my terminal is in light mode?
-vim.cmd 'colorscheme slate'
+vim.cmd 'colorscheme pablo'
 
 vim.cmd([[
   augroup packer_user_config
