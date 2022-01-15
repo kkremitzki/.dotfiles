@@ -6,8 +6,9 @@ local servers = {
   -- "angularls",
   -- "ansiblels",
   "bashls",
-  -- "ccls",
-  "clangd",
+  -- Switched back from clangd to ccls since apparently clangd does not produce an arm64 build
+  "ccls",
+  -- "clangd",
   "cmake",
   -- "dockerls",
   -- "dotls",
@@ -19,7 +20,8 @@ local servers = {
   "pyright",
   "rust_analyzer",
   "sqls",
-  "sumneko_lua",
+  -- sumneko_lua also does not produce an arm64 build
+  -- "sumneko_lua",
   "vimls",
   -- "vuels",
   "yamlls",
