@@ -10,7 +10,12 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'tpope/vim-fugitive'
   use 'neovim/nvim-lspconfig'
-  use 'williamboman/nvim-lsp-installer'
+  use {
+      'williamboman/nvim-lsp-installer',
+      config = function()
+          require('langservers')
+      end
+  }
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
@@ -20,7 +25,12 @@ return require('packer').startup(function(use)
   use 'saadparwaiz1/cmp_luasnip'
   use {
       'nvim-treesitter/nvim-treesitter',
-      run = ':TSUpdate'
+      run = ':TSUpdate',
+      config = function()
+          require('treesitter-config')
+          vim.opt.foldmethod = 'expr'
+          vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
+      end
   }
 
   -- Automatically set up your configuration after cloning packer.nvim
