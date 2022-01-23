@@ -8,5 +8,6 @@ PACKER_TARGET="$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim"
 sudo apt-get install $DEV_PKGS
 [ ! -d "$PACKER_TARGET" ] && \
 git clone --depth 1 "$PACKER_REPO" "$PACKER_TARGET"
+[ ! -h ~/.bashrc ] && rm ~/.bashrc
 stow -R .
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
