@@ -1,1 +1,1 @@
---ignore README.md --ignore TODO.md --ignore NOTES.md
+--ignore README.md --ignore TODO.md --ignore NOTES.md --ignore first-run.sh
