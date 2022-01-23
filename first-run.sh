@@ -11,6 +11,7 @@ git clone --depth 1 "$PACKER_REPO" "$PACKER_TARGET"
 [ ! -h ~/.bashrc ] && rm ~/.bashrc
 stow -R .
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+nvim --headless -c 'LspInstall --sync'
 sudo update-alternatives --set editor /usr/bin/nvim
 sudo update-alternatives --set vim /usr/bin/nvim
 sudo update-alternatives --set vi /usr/bin/nvim
