@@ -1,6 +1,6 @@
 #!/bin/sh
 DEV_PKGS="neovim python3-venv direnv fzf ripgrep stow tmux cmake golang npm \
-          fd-find bat wget bash-completion"
+          fd-find bat wget bash-completion unzip"
 PACKER_REPO="https://github.com/wbthomason/packer.nvim"
 PACKER_TARGET="$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim"
 
