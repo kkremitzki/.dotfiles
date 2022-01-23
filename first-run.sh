@@ -2,7 +2,7 @@
 dev_pkgs="neovim python3-venv direnv fzf ripgrep stow tmux cmake golang npm \
           fd-find bat wget bash-completion unzip"
 packer_repo="https://github.com/wbthomason/packer.nvim"
-packer_target="$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim"
+packer_target="${HOME:-/home/$(whoami)}/.local/share/nvim/site/pack/packer/start/packer.nvim"
 langservers="bashls clangd cmake html jsonls pyright rust_analyzer sqlls \
              sumneko_lua vimls yamlls"
 
