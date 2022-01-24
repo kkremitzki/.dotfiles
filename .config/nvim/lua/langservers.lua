@@ -1,3 +1,4 @@
+-- Check if I have this module
 local lsp_installer = require "nvim-lsp-installer"
 
 -- Include the servers you want to have installed by default below
@@ -15,11 +16,11 @@ local servers = {
   -- "fortls",
   "html",
   "jsonls",
-  "lemminx",
-  "ltex",
+  -- "lemminx",
+  -- "ltex",
   "pyright",
   "rust_analyzer",
-  "sqls",
+  "sqlls",
   -- sumneko_lua also does not produce an arm64 build
   -- "sumneko_lua",
   "vimls",
