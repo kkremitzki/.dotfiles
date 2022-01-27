@@ -1,2 +1,4 @@
 .config/nvim/plugin/packer_compiled.lua
 .config/lxc
+nvim-lsp.log
+nvim-packer.log

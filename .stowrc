@@ -1,1 +1,1 @@
---ignore README.md --ignore TODO.md --ignore NOTES.md --ignore first-run.sh
+--ignore README.md --ignore TODO.md --ignore NOTES.md --ignore first-run.sh --ignore nvim-lsp.log --ignore nvim-packer.log
