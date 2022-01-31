@@ -1,4 +1,6 @@
 #!/bin/sh
+set -e
+
 export HOME="${HOME:-/home/$(whoami)}"
 dev_pkgs="neovim python3-venv direnv fzf ripgrep stow tmux cmake golang npm \
           fd-find bat wget bash-completion unzip"
