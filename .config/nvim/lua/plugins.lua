@@ -78,6 +78,12 @@ return require('packer').startup(function(use)
   use 'tpope/vim-vinegar'
   use 'tpope/vim-surround'
   use 'alcesleo/vim-uppercase-sql'
+  use {
+      'numToStr/Comment.nvim',
+      config = function()
+          require('Comment').setup()
+      end
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
