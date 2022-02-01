@@ -3,3 +3,5 @@
 nvim-lsp.log
 nvim-packer.log
 .config/nvim-qt/window-geometry.conf
+.config/user-dirs.dirs
+.config/user-dirs.locale
