@@ -77,6 +77,7 @@ return require('packer').startup(function(use)
   use 'romainl/vim-cool'
   use 'tpope/vim-vinegar'
   use 'tpope/vim-surround'
+  use 'alcesleo/vim-uppercase-sql'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
