@@ -2,3 +2,4 @@
 .config/lxc
 nvim-lsp.log
 nvim-packer.log
+.config/nvim-qt/window-geometry.conf
