@@ -77,6 +77,7 @@ return require('packer').startup(function(use)
   use 'romainl/vim-cool'
   use 'tpope/vim-vinegar'
   use 'tpope/vim-surround'
+  use 'tpope/vim-unimpaired'
   use 'alcesleo/vim-uppercase-sql'
   use {
       'numToStr/Comment.nvim',
