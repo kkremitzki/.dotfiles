@@ -3,7 +3,7 @@ vim.opt.termguicolors = true
 require('plugins')
 require('mappings')
 
-vim.cmd 'colorscheme slate'
+vim.cmd 'colorscheme gruvbox'
 
 vim.cmd([[
   augroup packer_user_config
