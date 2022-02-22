@@ -1,5 +1,12 @@
 .envrc
 .venv
+
+# Be mindful that some of these should also go into .gitignore directly
+# Perhaps only relevant for repos I plan to publish and have others use, though
+__pycache__
+.pytest_cache
+.mypy_cache
+
+# These should be removed after migration from old dotfiles
 tags
 tags.lock
-__pycache__
