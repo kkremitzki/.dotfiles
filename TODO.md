@@ -1,12 +1,9 @@
-Previously I used <leader>ev to open up my dotfiles dir for editing.
-How can I do something similar now, preferably with something built-in?
-For example, right now, I would like to know the current inventory of Neovim
-plugins in use.
-
-Investigate setting of `TERM=screen-256color` in tmux config.
-Manpage says TERM "must" be `screen` or `tmux`.
-However, without this setting, my bash prompt coloration does not work.
-What is the correct solution?
-
 Find if there is a bash equivalent to zsh's automatic definition of `..`,
 `...`, etc.
+
+Q: I have intentionally broken transparent background support with current tmux
+   config. How can I fix it? Do I want it to be disabled?
+
+A: `:hi! Normal ctermbg=NONE guibg=NONE` added to vim config.
+
+Check out telescope.nvim @ https://github.com/nvim-telescope/telescope.nvim
