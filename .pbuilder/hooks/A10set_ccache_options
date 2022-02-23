@@ -1,0 +1,8 @@
+# A10_set_ccache_options
+# setting needed options to ccache
+# possible options can be found on http://ccache.samba.org/manual.html#_options
+
+# increase the ccache caching size
+ccache -M 8G
+# output the current statistics
+ccache -s
