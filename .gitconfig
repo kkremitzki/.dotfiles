@@ -3,3 +3,5 @@
 [user]
 	email = kurt@kwk.systems
 	name = Kurt Kremitzki
+[pull]
+	ff = only
