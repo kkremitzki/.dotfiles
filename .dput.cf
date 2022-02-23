@@ -1,0 +1,34 @@
+[my-ppa]
+fqdn = ppa.launchpad.net
+method = ftp
+login = anonymous
+incoming = ~kkremitzki/ubuntu/ppa/
+allow_unsigned_uploads = 0
+
+[opencascade]
+fqdn = ppa.launchpad.net
+method = ftp
+login = anonymous
+incoming = ~kkremitzki/ubuntu/opencascade/
+allow_unsigned_uploads = 0
+
+[freecad-daily]
+fqdn = ppa.launchpad.net
+method = ftp
+incoming = ~freecad-maintainers/ubuntu/freecad-daily/
+login = anonymous
+allow_unsigned_uploads = 0
+
+[freecad-community]
+fqdn = ppa.launchpad.net
+method = ftp
+incoming = ~freecad-community/ubuntu/ppa/
+login = anonymous
+allow_unsigned_uploads = 0
+
+[ftp-master]
+fqdn                    = ftp.upload.debian.org
+incoming                = /pub/UploadQueue/
+login                   = anonymous
+allow_dcut              = 1
+method                  = ftp
