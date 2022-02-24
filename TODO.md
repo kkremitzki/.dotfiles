@@ -16,3 +16,11 @@ set up to use my dotfiles to run a single command which pulls any updates availa
 and deploys them. The need for this is not terribly pressing, but it's a decent
 example of the plan to deploy small, useful utilities as part of my dotfiles
 repo.
+
+While bootstraping, I get this result if I open neovim before gruvbox is installed:
+Error detected while processing /home/debian/dotfiles/.config/nvim/init.lua:
+E5113: Error while calling lua chunk: /home/debian/.config/nvim/init.lua:6: Vim(colorscheme):E185: Cannot find color scheme 'gruvbox'
+stack traceback:
+        [C]: in function 'cmd'
+        /home/debian/.config/nvim/init.lua:6: in main chunk
+How can I guard against this error and handle it appropriately?
