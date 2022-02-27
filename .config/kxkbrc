@@ -1,0 +1,13 @@
+[Layout]
+DisplayNames=
+LayoutList=us
+LayoutLoopCount=-1
+Model=
+Options=compose:ralt,caps:swapescape
+ResetOldOptions=false
+ShowFlag=false
+ShowLabel=true
+ShowLayoutIndicator=true
+ShowSingle=false
+SwitchMode=Global
+Use=true
