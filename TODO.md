@@ -24,3 +24,13 @@ stack traceback:
         [C]: in function 'cmd'
         /home/debian/.config/nvim/init.lua:6: in main chunk
 How can I guard against this error and handle it appropriately?
+
+When using Steam, absolute symlinks get created that produce a warning in stow:
+  BUG in find_stowed_path? Absolute/relative mismatch between Stow dir dotfiles and path /home/kurt/.steam/steam.pid at /usr/share/perl5/Stow.pm line 966.
+  BUG in find_stowed_path? Absolute/relative mismatch between Stow dir dotfiles and path /home/kurt/.steam/sdk32/steam at /usr/share/perl5/Stow.pm line 966.
+
+To fix, run:
+  $ unlink .steampath
+  $ ln -s .steam/sdk32/steam .steampath
+  $ unlink .steampid
+  $ ln -s .steam/steam.pid .steampid
