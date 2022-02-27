@@ -2,9 +2,9 @@
 DisplayNames=
 LayoutList=us
 LayoutLoopCount=-1
-Model=
+Model=pc101
 Options=compose:ralt,caps:swapescape
-ResetOldOptions=false
+ResetOldOptions=true
 ShowFlag=false
 ShowLabel=true
 ShowLayoutIndicator=true
