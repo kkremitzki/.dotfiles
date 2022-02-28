@@ -13,6 +13,8 @@ vim.cmd([[
   augroup end
 ]])
 
+vim.opt.number = true
+
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
 -- Backspace spaces as if they were a 4-length tabstop
