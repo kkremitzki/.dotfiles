@@ -86,7 +86,13 @@ return require('packer').startup(function(use)
       end
   }
 
-  use 'ellisonleao/gruvbox.nvim'
+  use {
+    'ellisonleao/gruvbox.nvim',
+    config = function()
+      vim.cmd 'colorscheme gruvbox'
+      vim.cmd 'highlight! Normal ctermbg=NONE guibg=NONE'
+    end
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
