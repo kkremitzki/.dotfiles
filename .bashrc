@@ -124,4 +124,4 @@ GIT_PS1_SHOWUPSTREAM="auto git"
 [[ -z "$TMUX" ]] && command -v tmux && exec tmux
 
 # Initialize direnv; must be at end
-command -v direnv && eval "$(direnv hook bash)"
+command -v direnv > /dev/null 2>&1 && eval "$(direnv hook bash)"
