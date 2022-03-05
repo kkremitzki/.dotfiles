@@ -3,6 +3,12 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'tpope/vim-fugitive'
   use {
+    'nvim-lua/plenary.nvim',
+    config = function()
+      require 'plenary.async'
+    end
+  }
+  use {
     'lewis6991/gitsigns.nvim',
     requires = {
       'nvim-lua/plenary.nvim'
