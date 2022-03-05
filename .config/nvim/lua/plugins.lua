@@ -17,8 +17,8 @@ return require('packer').startup(function(use)
       require('gitsigns').setup{
         on_attach = function(bufnr)
           local function map(mode, lhs, rhs, opts)
-              opts = vim.tbl_extend('force', {noremap = true, silent = true}, opts or {})
-              vim.api.nvim_buf_set_keymap(bufnr, mode, lhs, rhs, opts)
+            opts = vim.tbl_extend('force', {noremap = true, silent = true}, opts or {})
+            vim.api.nvim_buf_set_keymap(bufnr, mode, lhs, rhs, opts)
           end
 
           -- Navigation
@@ -49,10 +49,10 @@ return require('packer').startup(function(use)
   }
   use 'neovim/nvim-lspconfig'
   use {
-      'williamboman/nvim-lsp-installer',
-      config = function()
-          require('langservers')
-      end
+    'williamboman/nvim-lsp-installer',
+    config = function()
+      require('langservers')
+    end
   }
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
@@ -63,13 +63,13 @@ return require('packer').startup(function(use)
   use 'L3MON4D3/LuaSnip'
   use 'saadparwaiz1/cmp_luasnip'
   use {
-      'nvim-treesitter/nvim-treesitter',
-      run = ':TSUpdate',
-      config = function()
-          require('treesitter-config')
-          vim.opt.foldmethod = 'expr'
-          vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
-      end
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate',
+    config = function()
+      require('treesitter-config')
+      vim.opt.foldmethod = 'expr'
+      vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
+    end
   }
 
   use 'vimwiki/vimwiki'
@@ -79,10 +79,10 @@ return require('packer').startup(function(use)
   use 'tpope/vim-unimpaired'
   use 'alcesleo/vim-uppercase-sql'
   use {
-      'numToStr/Comment.nvim',
-      config = function()
-          require('Comment').setup()
-      end
+    'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup()
+    end
   }
 
   use {
