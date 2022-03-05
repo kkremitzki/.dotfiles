@@ -48,12 +48,12 @@ return require('packer').startup(function(use)
     end
   }
   use 'neovim/nvim-lspconfig'
-  use {
-    'williamboman/nvim-lsp-installer',
-    config = function()
-      require('langservers')
-    end
-  }
+  -- use {
+  --   'williamboman/nvim-lsp-installer',
+  --   config = function()
+  --     require('langservers')
+  --   end
+  -- }
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
@@ -62,15 +62,15 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-nvim-lua'
   use 'L3MON4D3/LuaSnip'
   use 'saadparwaiz1/cmp_luasnip'
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate',
-    config = function()
-      require('treesitter-config')
-      vim.opt.foldmethod = 'expr'
-      vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
-    end
-  }
+  -- use {
+  --   'nvim-treesitter/nvim-treesitter',
+  --   run = ':TSUpdate',
+  --   config = function()
+  --     require('treesitter-config')
+  --     vim.opt.foldmethod = 'expr'
+  --     vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
+  --   end
+  -- }
 
   use 'vimwiki/vimwiki'
   use 'romainl/vim-cool'
