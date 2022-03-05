@@ -3,6 +3,10 @@ local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 local packer_url = 'https://github.com/wbthomason/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
   PACKER_BOOTSTRAP = fn.system({'git', 'clone', '--depth', '1', packer_url, install_path})
+  while io.open(install_path) == nil do
+    print("Waiting to complete 'git clone' for packer.nvim ...")
+    os.execute("sleep 1")
+  end
 end
 
 return require('packer').startup(function(use)
