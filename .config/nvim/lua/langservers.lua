@@ -4,28 +4,25 @@ local lsp_installer = require "nvim-lsp-installer"
 -- Include the servers you want to have installed by default below
 
 local servers = {
-  -- "angularls",
-  -- "ansiblels",
   "bashls",
-  -- "ccls",
   "clangd",
   "cmake",
-  -- "dockerls",
-  -- "dotls",
-  -- "fortls",
+  "cssls",
+  "dockerls",
+  "dotls",
+  "fortls",
   "html",
+  "intelephense",
   "jsonls",
-  -- "lemminx",
-  -- "ltex",
+  "lemminx",
   "pyright",
   "rust_analyzer",
-  -- "sqls",
   "sqlls",
   "sumneko_lua",
+  "texlab",
+  "tsserver",
   "vimls",
-  -- "vuels",
   "yamlls",
-  -- "zk",
 }
 
 for _, name in pairs(servers) do

@@ -48,12 +48,12 @@ return require('packer').startup(function(use)
     end
   }
   use 'neovim/nvim-lspconfig'
-  -- use {
-  --   'williamboman/nvim-lsp-installer',
-  --   config = function()
-  --     require('langservers')
-  --   end
-  -- }
+  use {
+    'williamboman/nvim-lsp-installer',
+    config = function()
+      require('langservers')
+    end
+  }
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
