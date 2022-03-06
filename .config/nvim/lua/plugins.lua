@@ -3,12 +3,6 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'tpope/vim-fugitive'
   use {
-    'nvim-lua/plenary.nvim',
-    config = function()
-      require 'plenary.async'
-    end
-  }
-  use {
     'lewis6991/gitsigns.nvim',
     requires = {
       'nvim-lua/plenary.nvim'
@@ -56,9 +50,6 @@ return require('packer').startup(function(use)
   }
   use {
     'hrsh7th/cmp-nvim-lsp',
-    requires = {
-      'williamboman/nvim-lsp-installer'
-    },
     config = function()
       require('cmp-lsp-config')
     end
@@ -68,9 +59,6 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-cmdline'
   use {
     'hrsh7th/nvim-cmp',
-    requires = {
-      'L3MON4D3/LuaSnip'
-    },
     config = function()
       require('cmp-config')
     end
