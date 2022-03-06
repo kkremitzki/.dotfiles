@@ -20,9 +20,9 @@ sudo apt-get install --yes $dev_pkgs
 git clone --depth 1 "$packer_repo" "$packer_target"
 [ -f ~/.bashrc ] && [ ! -h ~/.bashrc ] && rm ~/.bashrc
 stow -R .
-sudo update-alternatives --set editor /usr/bin/nvim
-sudo update-alternatives --set vim /usr/bin/nvim
-sudo update-alternatives --set vi /usr/bin/nvim
+# sudo update-alternatives --set editor /usr/bin/nvim
+# sudo update-alternatives --set vim /usr/bin/nvim
+# sudo update-alternatives --set vi /usr/bin/nvim
 nvim --headless -c "autocmd User PackerComplete quitall" -c "PackerInstall" >> nvim-packer.log 2>&1
 echo >> nvim-packer.log
 nvim --headless -c "autocmd User PackerComplete quitall" -c "PackerSync" >> nvim-packer.log 2>&1
