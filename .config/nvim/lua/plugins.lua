@@ -51,14 +51,30 @@ return require('packer').startup(function(use)
   use {
     'williamboman/nvim-lsp-installer',
     config = function()
-      require('langservers')
+      require('lsp-config')
     end
   }
-  use 'hrsh7th/cmp-nvim-lsp'
+  use {
+    'hrsh7th/cmp-nvim-lsp',
+    requires = {
+      'williamboman/nvim-lsp-installer'
+    },
+    config = function()
+      require('cmp-lsp-config')
+    end
+  }
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
-  use 'hrsh7th/nvim-cmp'
+  use {
+    'hrsh7th/nvim-cmp',
+    requires = {
+      'L3MON4D3/LuaSnip'
+    },
+    config = function()
+      require('cmp-config')
+    end
+  }
   use 'hrsh7th/cmp-nvim-lua'
   use 'L3MON4D3/LuaSnip'
   use 'saadparwaiz1/cmp_luasnip'
