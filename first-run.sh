@@ -20,4 +20,4 @@ sudo update-alternatives --set vim /usr/bin/nvim
 sudo update-alternatives --set vi /usr/bin/nvim
 nvim --headless -c "autocmd User PackerComplete quitall" -c "PackerInstall" >> nvim-packer.log 2>&1
 nvim --headless -c "autocmd User PackerComplete quitall" -c "PackerSync" >> nvim-packer.log 2>&1
-nvim --headless -c "LspInstall --sync ${langservers}" -c q >> nvim-lsp.log 2>&1
+# nvim --headless -c "LspInstall --sync ${langservers}" -c q >> nvim-lsp.log 2>&1
