@@ -29,3 +29,9 @@ To fix, run:
   $ ln -s .steam/sdk32/steam .steampath
   $ unlink .steampid
   $ ln -s .steam/steam.pid .steampid
+  
+Set up to support current Ubuntu LTS host.
+Differences to keep track of:
+- need ppa:neovim-ppa/stable
+- installing ripgrep requires ovewriting package in bat:
+    - `sudo apt install ripgrep -o Dpkg::Options::="--force-overwrite"`
