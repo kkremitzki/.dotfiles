@@ -20,6 +20,7 @@ sudo apt-get install --yes -o Dpkg::Options::="--force-overwrite" bat
 [ ! -d "$packer_target" ] && \
 git clone --depth 1 "$packer_repo" "$packer_target"
 [ -f ~/.bashrc ] && [ ! -h ~/.bashrc ] && rm ~/.bashrc
+[ -f ~/.config/kxkbrc ] && [ ! -h ~/.config/kxkbrc ] && rm ~/.config/kxkbrc
 stow -R .
 # sudo update-alternatives --set editor /usr/bin/nvim
 # sudo update-alternatives --set vim /usr/bin/nvim
