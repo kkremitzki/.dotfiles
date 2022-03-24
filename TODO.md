@@ -33,5 +33,8 @@ To fix, run:
 Set up to support current Ubuntu LTS host.
 Differences to keep track of:
 - need ppa:neovim-ppa/stable
+- need newer nodejs:
+  - `curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -`
+    `sudo apt-get install -y nodejs`
 - installing ripgrep requires ovewriting package in bat:
-    - `sudo apt install ripgrep -o Dpkg::Options::="--force-overwrite"`
+  - `sudo apt install ripgrep -o Dpkg::Options::="--force-overwrite"`
