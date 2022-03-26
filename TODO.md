@@ -39,3 +39,5 @@ Differences to keep track of:
   - if we have to install this nodejs, then `sudo apt install npm` will fail
 - installing ripgrep requires ovewriting package in bat:
   - `sudo apt install ripgrep -o Dpkg::Options::="--force-overwrite"`
+
+Change tmux config to use xclip instead of xsel and remove dep from setup script
