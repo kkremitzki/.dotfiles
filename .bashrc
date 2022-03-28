@@ -70,6 +70,14 @@ fi
 if [ -f /usr/share/bash-completion/bash_completion ]; then
     PS1+='${VENV_PS1}$(__git_ps1 "(%s)")'
 fi
+# Return code error display
+ps1_error() {
+  local e=$?
+  #(( e )) && printf "$e|" # BW
+  (( e )) && printf "\033[01;31m[$e]\033[00m"  # color
+  return $e
+}
+PS1+='$(ps1_error)'
 PS1+='\$ '
 unset color_prompt force_color_prompt
 
