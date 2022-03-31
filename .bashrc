@@ -131,8 +131,8 @@ if ! shopt -oq posix; then
 fi
 
 # set up fzf integration
-if [ -f /usr/share/doc/fzf/examples/completion.bash ]; then
-    . /usr/share/doc/fzf/examples/completion.bash
+if [ -f /usr/share/bash-completion/completions/fzf ]; then
+    . /usr/share/bash-completion/completions/fzf
 fi
 
 if [ -f /usr/share/doc/fzf/examples/key-bindings.bash ]; then
