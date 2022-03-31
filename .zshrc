@@ -27,8 +27,8 @@ zle -N edit-command-line
 bindkey -M vicmd 'v' edit-command-line
 
 # Keep 10000 lines of history within the shell and save it to ~/.zsh_history:
-HISTSIZE=10000
-SAVEHIST=20000
+HISTSIZE=1000000
+SAVEHIST=2000000
 HISTFILE=~/.zsh_history
 
 # Use modern completion system
