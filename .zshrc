@@ -34,6 +34,8 @@ HISTFILE=~/.zsh_history
 # Use modern completion system
 autoload -Uz compinit
 compinit
+autoload -Uz bashcompinit
+bashcompinit
 
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
@@ -80,6 +82,18 @@ fi
 
 if command -v direnv &>/dev/null; then
     eval "$(direnv hook zsh)"
+fi
+
+# Hacky solution for lxd completion, can we do better?
+if [ -f /usr/local/go/src/github.com/lxc/lxd/scripts/bash/lxd-client ]; then
+    # Normally available in bash...
+    _have()
+    {
+        PATH=$PATH:/usr/sbin:/sbin:/usr/local/sbin type $1 &>/dev/null
+    }
+
+    source /usr/local/go/src/github.com/lxc/lxd/scripts/bash/lxd-client
+
 fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
