@@ -14,7 +14,9 @@ autoload -Uz promptinit
 promptinit
 prompt adam1
 
-setopt histignorealldups sharehistory
+# History options
+# EXTENDED_HISTORY not storing command time correctly, disable for now
+setopt HIST_IGNORE_ALL_DUPS SHARE_HISTORY HIST_IGNORE_SPACE
 
 # Use vi keybindings
 bindkey -v
@@ -46,7 +48,6 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-# TODO Check for existence, move to better location
 if [ -f ~/.local/share/powerlevel10k/powerlevel10k.zsh-theme ]; then
     source ~/.local/share/powerlevel10k/powerlevel10k.zsh-theme
 fi
