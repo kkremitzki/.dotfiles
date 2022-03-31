@@ -7,9 +7,12 @@ export HOME="${HOME:-/home/$(whoami)}"
 # to load servers table from this file instead of maintaining lists in two
 # places
 dev_pkgs="neovim python3-venv direnv fzf ripgrep stow tmux cmake golang npm \
-          fd-find bash-completion unzip tmux-themepack-jimeh"
+          fd-find bash-completion unzip tmux-themepack-jimeh zsh \
+          zsh-autosuggestions zsh-syntax-highlighting"
 packer_repo="https://github.com/wbthomason/packer.nvim"
 packer_target="${HOME}/.local/share/nvim/site/pack/packer/start/packer.nvim"
+p10k_repo="https://github.com/romkatv/powerlevel10k"
+p10k_target="${HOME}/.local/share/powerlevel10k"
 langservers="bashls clangd cmake cssls dockerls dotls fortls html intelephense \
              jsonls lemminx pyright rust_analyzer sqlls sumneko_lua texlab \
              tsserver vimls yamlls"
@@ -19,6 +22,8 @@ sudo apt-get install --yes $dev_pkgs
 sudo apt-get install --yes -o Dpkg::Options::="--force-overwrite" bat
 [ ! -d "$packer_target" ] && \
 git clone --depth 1 "$packer_repo" "$packer_target"
+[ ! -d "p10k_target" ] && \
+git clone --depth 1 "$p10k_repo" "$p10k_target"
 [ -f ~/.bashrc ] && [ ! -h ~/.bashrc ] && rm ~/.bashrc
 [ -f ~/.config/kxkbrc ] && [ ! -h ~/.config/kxkbrc ] && rm ~/.config/kxkbrc
 stow -R .
