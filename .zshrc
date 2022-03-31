@@ -20,6 +20,11 @@ setopt HIST_IGNORE_ALL_DUPS SHARE_HISTORY HIST_IGNORE_SPACE
 
 # Use vi keybindings
 bindkey -v
+autoload -z edit-command-line
+zle -N edit-command-line
+# Optionally use emacs-style binding so we don't overlap with vi visual mode
+# bindkey "^X^E" edit-command-line
+bindkey -M vicmd 'v' edit-command-line
 
 # Keep 10000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=10000
@@ -71,6 +76,10 @@ fi
 
 if [ -f ~/.bash_aliases ]; then
     source ~/.bash_aliases
+fi
+
+if command -v direnv &>/dev/null; then
+    eval "$(direnv hook zsh)"
 fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
