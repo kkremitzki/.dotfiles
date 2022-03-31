@@ -8,7 +8,7 @@ export HOME="${HOME:-/home/$(whoami)}"
 # places
 dev_pkgs="neovim python3-venv direnv fzf ripgrep stow tmux cmake golang npm \
           fd-find bash-completion unzip tmux-themepack-jimeh zsh \
-          zsh-autosuggestions zsh-syntax-highlighting"
+          zsh-autosuggestions zsh-syntax-highlighting curl"
 packer_repo="https://github.com/wbthomason/packer.nvim"
 packer_target="${HOME}/.local/share/nvim/site/pack/packer/start/packer.nvim"
 p10k_repo="https://github.com/romkatv/powerlevel10k"
