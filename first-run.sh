@@ -7,7 +7,7 @@ export HOME="${HOME:-/home/$(whoami)}"
 # to load servers table from this file instead of maintaining lists in two
 # places
 dev_pkgs="neovim python3-venv direnv fzf ripgrep stow tmux cmake golang npm \
-          fd-find bash-completion unzip"
+          fd-find bash-completion unzip tmux-themepack-jimeh"
 packer_repo="https://github.com/wbthomason/packer.nvim"
 packer_target="${HOME}/.local/share/nvim/site/pack/packer/start/packer.nvim"
 langservers="bashls clangd cmake cssls dockerls dotls fortls html intelephense \
