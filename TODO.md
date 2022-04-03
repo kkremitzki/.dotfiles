@@ -39,3 +39,6 @@ Differences to keep track of:
   - if we have to install this nodejs, then `sudo apt install npm` will fail
 - installing ripgrep requires ovewriting package in bat:
   - `sudo apt install ripgrep -o Dpkg::Options::="--force-overwrite"`
+
+Handle dependency of wl-clipboard without needing to pull in unnecessary
+wayland packages
