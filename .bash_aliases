@@ -6,6 +6,7 @@ alias scu='systemctl --user'
 alias vla='sudo virsh list --all'
 alias vss='sudo virsh start'
 alias vsh='sudo virsh shutdown'
+alias vco='sudo virsh console'
 
 mcd () {
     mkdir -p "$1" && cd "$1"
