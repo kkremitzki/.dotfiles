@@ -91,9 +91,9 @@ return require('packer').startup(function(use)
   }
 
   use {
-    'ellisonleao/gruvbox.nvim',
+    'folke/tokyonight.nvim',
     config = function()
-      vim.cmd 'colorscheme gruvbox'
+      vim.cmd 'colorscheme tokyonight'
       vim.cmd 'highlight! Normal ctermbg=NONE guibg=NONE'
     end
   }
