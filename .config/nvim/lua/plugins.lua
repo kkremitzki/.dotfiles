@@ -84,6 +84,7 @@ return require('packer').startup(function(use)
   use 'alcesleo/vim-uppercase-sql'
   use {
     'numToStr/Comment.nvim',
+    tag = 'v0.6',
     config = function()
       require('Comment').setup()
     end
