@@ -37,3 +37,6 @@ vim.opt.mouse = 'a'
 -- Default split behavior seems a bit disorienting with current placement of
 -- text replaced with new split, so split below instead
 vim.opt.splitbelow = true
+
+-- Do not start with folds
+vim.opt.foldenable = false
