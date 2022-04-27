@@ -19,6 +19,8 @@ langservers="bashls clangd cmake cssls dockerls dotls fortls html intelephense \
 
 # shellcheck disable=SC2086 # Intended splitting of DEV_PKGS
 sudo apt-get install --yes $dev_pkgs
+# TODO Only do this on the appropriate distro (Ubuntu 20.04), this is not a
+# universal problem
 sudo apt-get install --yes -o Dpkg::Options::="--force-overwrite" bat
 [ ! -d "$packer_target" ] && \
 git clone --depth 1 "$packer_repo" "$packer_target"
