@@ -44,9 +44,10 @@ return require('packer').startup(function(use)
   use 'neovim/nvim-lspconfig'
   use {
     'williamboman/nvim-lsp-installer',
-    -- config = function()
-    --   require('lsp-config')
-    -- end
+    config = function()
+      -- Load separate config file
+      require('lsp-config')
+    end
   }
   use {
     'hrsh7th/cmp-nvim-lsp',
@@ -60,6 +61,7 @@ return require('packer').startup(function(use)
   use {
     'hrsh7th/nvim-cmp',
     config = function()
+      -- Load separate config file
       require('cmp-config')
     end
   }
@@ -84,7 +86,6 @@ return require('packer').startup(function(use)
   use 'alcesleo/vim-uppercase-sql'
   use {
     'numToStr/Comment.nvim',
-    tag = 'v0.6',
     config = function()
       require('Comment').setup()
     end
@@ -93,6 +94,8 @@ return require('packer').startup(function(use)
   use {
     'folke/tokyonight.nvim',
     config = function()
+      vim.g.tokyonight_style = 'storm'
+      vim.g.tokyonight_transparent = true
       vim.cmd 'colorscheme tokyonight'
       vim.cmd 'highlight! Normal ctermbg=NONE guibg=NONE'
     end
