@@ -3,6 +3,7 @@ local lsp_installer = require "nvim-lsp-installer"
 
 -- Include the servers you want to have installed by default below
 
+-- TODO clangd and sqlls should not be included on arm64 platform
 local servers = {
   "bashls",
   "clangd",
