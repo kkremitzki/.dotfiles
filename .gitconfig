@@ -14,3 +14,10 @@
 [alias]
 	bla = branch --list --all
 	bl = branch --list
+        rbi = !sh -c 'git rebase -i HEAD~$1' -
+        rh = reset --hard
+        rhh = reset --hard HEAD~1
+        cf = clean -fxd
+        ci = commit -m
+        tl = tag --list
+        hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
