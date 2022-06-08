@@ -11,3 +11,6 @@
 	pushInsteadOf = kde:
 [merge]
 	conflictStyle = diff3
+[alias]
+	bla = branch --list --all
+	bl = branch --list
