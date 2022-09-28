@@ -5,10 +5,11 @@ UNRELEASED_CODENAME="UNRELEASED"
 TESTING_CODENAME="bookworm"
 STABLE_CODENAME="bullseye"
 STABLE_BACKPORTS_SUITE="$STABLE_CODENAME-backports"
+OLDSTABLE_CODENAME="buster"
 
 # List of Debian suites.
-DEBIAN_SUITES=($UNRELEASED_CODENAME $UNSTABLE_CODENAME $TESTING_CODENAME $STABLE_CODENAME $STABLE_BACKPORTS_SUITE
-    "experimental" "unstable" "testing" "stable")
+DEBIAN_SUITES=($UNRELEASED_CODENAME $UNSTABLE_CODENAME $TESTING_CODENAME $STABLE_CODENAME $STABLE_BACKPORTS_SUITE $OLDSTABLE_CODENAME
+    "experimental" "unstable" "testing" "stable" "oldstable")
 
 # List of Ubuntu suites. Update these when needed.
 UBUNTU_SUITES=("bionic" "focal" "impish" "jammy")
@@ -40,6 +41,9 @@ case "$DIST" in
         ;;
     $STABLE_CODENAME)
         DIST="stable"
+        ;;
+    $OLDSTABLE_CODENAME)
+        DIST="oldstable"
         ;;
 esac
 
