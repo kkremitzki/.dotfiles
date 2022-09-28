@@ -21,3 +21,4 @@
         ci = commit -m
         tl = tag --list
         hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	fu = fetch upstream
