@@ -12,7 +12,7 @@ DEBIAN_SUITES=($UNRELEASED_CODENAME $UNSTABLE_CODENAME $TESTING_CODENAME $STABLE
     "experimental" "unstable" "testing" "stable" "oldstable")
 
 # List of Ubuntu suites. Update these when needed.
-UBUNTU_SUITES=("bionic" "focal" "impish" "jammy")
+UBUNTU_SUITES=("bionic" "focal" "jammy" "kinetic")
 
 # Mirrors to use. Update these to your preferred mirror.
 DEBIAN_MIRROR="ftp.us.debian.org"
