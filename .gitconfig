@@ -9,6 +9,8 @@
 	insteadOf = kde:
 [url "ssh://git@invent.kde.org/"]
 	pushInsteadOf = kde:
+[url "git+ssh://kkremitzki@git.launchpad.net/"]
+    insteadof = lp:
 [merge]
 	conflictStyle = diff3
 [alias]
