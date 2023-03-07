@@ -24,3 +24,9 @@
         tl = tag --list
         hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 	fu = fetch upstream
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
