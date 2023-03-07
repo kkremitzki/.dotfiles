@@ -1,1 +1,1 @@
-GuiScrollBar 1
+GuiScrollBar 0
