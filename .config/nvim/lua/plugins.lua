@@ -65,10 +65,11 @@ return require('packer').startup(function(use)
   use {
     'folke/tokyonight.nvim',
     config = function()
-      vim.g.tokyonight_style = 'storm'
-      vim.g.tokyonight_transparent = true
-      vim.cmd 'colorscheme tokyonight'
-      vim.cmd 'highlight! Normal ctermbg=NONE guibg=NONE'
+      require("tokyonight").setup({
+        style = "moon",
+        transparent = true,
+      })
+      vim.cmd[[colorscheme tokyonight]]
     end
   }
 
