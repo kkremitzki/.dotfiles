@@ -47,15 +47,58 @@ return require('packer').startup(function(use)
       }
     end
   }
-  -- use 'neovim/nvim-lspconfig'
+
+  use 'neovim/nvim-lspconfig'
+  use 'williamboman/mason-lspconfig.nvim'
   use {
     'williamboman/mason.nvim',
     config = function()
+      local servers = {
+        "bashls",
+        "clangd",
+        "cmake",
+        "cssls",
+        "fennel_language_server",
+        "fortls",
+        "html",
+        "intelephense",
+        "jdtls",
+        "jsonls",
+        "lemminx",
+        "lua_ls",
+        "nil_ls",
+        "perlnavigator",
+        "pyright",
+        "rust_analyzer",
+        "sqlls",
+        "taplo",
+        "teal_ls",
+        "terraformls",
+        "texlab",
+        "tsserver",
+        "vimls",
+        "yamlls",
+      }
       require("mason").setup()
-      -- Load separate config file
-      -- require('lsp-config')
+      require("mason-lspconfig").setup {
+        ensure_installed = servers,
+      }
+      require("mason-lspconfig").setup_handlers {
+          -- The first entry (without a key) will be the default handler
+          -- and will be called for each installed server that doesn't have
+          -- a dedicated handler.
+          function (server_name) -- default handler (optional)
+              require("lspconfig")[server_name].setup {}
+          end,
+          -- Next, you can provide a dedicated handler for specific servers.
+          -- For example, a handler override for the `rust_analyzer`:
+          -- ["rust_analyzer"] = function ()
+          --     require("rust-tools").setup {}
+          -- end
+      }
     end
   }
+
   -- use {
   --   'hrsh7th/cmp-nvim-lsp',
   --   config = function()
