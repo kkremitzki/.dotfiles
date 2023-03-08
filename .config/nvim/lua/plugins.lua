@@ -91,10 +91,17 @@ return require('packer').startup(function(use)
               require("lspconfig")[server_name].setup {}
           end,
           -- Next, you can provide a dedicated handler for specific servers.
-          -- For example, a handler override for the `rust_analyzer`:
-          -- ["rust_analyzer"] = function ()
-          --     require("rust-tools").setup {}
-          -- end
+          ["lua_ls"] = function ()
+            require("lspconfig").lua_ls.setup {
+              settings = {
+                Lua = {
+                  diagnostics = {
+                    globals = { "vim" }
+                  }
+                }
+              }
+            }
+          end,
       }
     end
   }
