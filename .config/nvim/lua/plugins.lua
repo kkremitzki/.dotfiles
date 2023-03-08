@@ -268,6 +268,10 @@ return require('packer').startup(function(use)
       require("tokyonight").setup({
         style = "moon",
         transparent = true,
+        on_colors = function(colors)
+          -- Use the 'day' theme color for line numbers so they're legible
+          colors.fg_gutter = "#a8aecb"
+        end
       })
       vim.cmd[[colorscheme tokyonight]]
     end
