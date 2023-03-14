@@ -12,3 +12,6 @@ __pycache__
 # These should be removed after migration from old dotfiles
 tags
 tags.lock
+
+# IDE config
+.idea
