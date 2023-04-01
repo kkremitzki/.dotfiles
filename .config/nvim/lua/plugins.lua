@@ -66,7 +66,7 @@ return require('packer').startup(function(use)
         "jsonls",
         "lemminx",
         "lua_ls",
-        "nil_ls",
+        -- "nil_ls",
         "perlnavigator",
         "pyright",
         "rust_analyzer",
