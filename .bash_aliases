@@ -7,6 +7,7 @@ alias vla='sudo virsh list --all'
 alias vss='sudo virsh start'
 alias vsh='sudo virsh shutdown'
 alias vco='sudo virsh console'
+alias nvd='nvim -c VimwikiMakeDiaryNote'
 
 mcd () {
     mkdir -p "$1" && cd "$1"
