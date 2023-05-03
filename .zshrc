@@ -96,5 +96,15 @@ if [ -f /usr/local/go/src/github.com/lxc/lxd/scripts/bash/lxd-client ]; then
 
 fi
 
+if [ -f /usr/share/bash-completion/completions/lxc ]; then
+    # Normally available in bash...
+    _have()
+    {
+        PATH=$PATH:/usr/sbin:/sbin:/usr/local/sbin type $1 &>/dev/null
+    }
+
+    source /usr/share/bash-completion/completions/lxc
+fi
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
