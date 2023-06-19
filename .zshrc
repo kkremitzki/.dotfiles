@@ -59,6 +59,10 @@ if [ -f ~/.local/share/powerlevel10k/powerlevel10k.zsh-theme ]; then
     source ~/.local/share/powerlevel10k/powerlevel10k.zsh-theme
 fi
 
+if [ -f /usr/share/powerlevel9k/powerlevel9k.zsh-theme ]; then
+    source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
+fi
+
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
     source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
     bindkey '^F' autosuggest-accept
