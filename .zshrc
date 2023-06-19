@@ -80,10 +80,6 @@ if [ -f ~/.bash_aliases ]; then
     source ~/.bash_aliases
 fi
 
-if command -v direnv &>/dev/null; then
-    eval "$(direnv hook zsh)"
-fi
-
 # Hacky solution for lxd completion, can we do better?
 if [ -f /usr/local/go/src/github.com/lxc/lxd/scripts/bash/lxd-client ]; then
     # Normally available in bash...
@@ -108,3 +104,7 @@ fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+if command -v direnv &>/dev/null; then
+    eval "$(direnv hook zsh)"
+fi
