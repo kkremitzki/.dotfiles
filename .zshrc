@@ -57,6 +57,8 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 if [ -f ~/.local/share/powerlevel10k/powerlevel10k.zsh-theme ]; then
     source ~/.local/share/powerlevel10k/powerlevel10k.zsh-theme
+    # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+    [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 elif [ -f /usr/share/powerlevel9k/powerlevel9k.zsh-theme ]; then
     source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
 fi
@@ -103,9 +105,6 @@ if [ -f /usr/share/bash-completion/completions/lxc ]; then
 
     source /usr/share/bash-completion/completions/lxc
 fi
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 if command -v direnv &>/dev/null; then
     eval "$(direnv hook zsh)"
