@@ -266,14 +266,14 @@ return require('packer').startup(function(use)
     'folke/tokyonight.nvim',
     config = function()
       require("tokyonight").setup({
-        style = "moon",
-        transparent = true,
+        -- style = "day",
+        -- transparent = true,
         on_colors = function(colors)
           -- Use the 'day' theme color for line numbers so they're legible
-          colors.fg_gutter = "#a8aecb"
+          -- colors.fg_gutter = "#a8aecb"
         end
       })
-      vim.cmd[[colorscheme tokyonight]]
+      -- vim.cmd[[colorscheme tokyonight]]
     end
   }
 
