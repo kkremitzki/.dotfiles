@@ -136,5 +136,9 @@ GIT_PS1_SHOWUPSTREAM="auto git"
 
 [[ -z "$TMUX" ]] && command -v tmux && exec tmux
 
+if [ -f ~/.local/bin/terraform ]; then
+    complete -C ~/.local/bin/terraform terraform
+fi
+
 # Initialize direnv; must be at end
 command -v direnv > /dev/null 2>&1 && eval "$(direnv hook bash)"

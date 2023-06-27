@@ -109,3 +109,9 @@ fi
 if command -v direnv &>/dev/null; then
     eval "$(direnv hook zsh)"
 fi
+
+if [ -f ~/.local/bin/terraform ]; then
+    complete -o nospace -C ~/.local/bin/terraform terraform
+fi
+
+autoload -U +X bashcompinit && bashcompinit
