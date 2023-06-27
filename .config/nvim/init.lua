@@ -1,3 +1,5 @@
+vim.cmd[[colorscheme default]]
+vim.opt.background = 'light'
 vim.opt.termguicolors = true
 
 -- bootstrap packer.nvim
