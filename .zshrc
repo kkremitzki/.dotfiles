@@ -16,7 +16,7 @@ prompt adam1
 
 # History options
 # EXTENDED_HISTORY not storing command time correctly, disable for now
-setopt HIST_IGNORE_ALL_DUPS SHARE_HISTORY HIST_IGNORE_SPACE
+setopt HIST_IGNORE_ALL_DUPS SHARE_HISTORY HIST_IGNORE_SPACE AUTO_CD
 
 # Use vi keybindings
 bindkey -v
@@ -115,3 +115,6 @@ if [ -f ~/.local/bin/terraform ]; then
 fi
 
 autoload -U +X bashcompinit && bashcompinit
+
+GUIX_PROFILE="/home/kurt/.guix-profile"
+. "$GUIX_PROFILE/etc/profile"
