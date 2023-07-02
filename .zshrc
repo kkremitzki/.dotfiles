@@ -116,5 +116,7 @@ fi
 
 autoload -U +X bashcompinit && bashcompinit
 
-GUIX_PROFILE="/home/kurt/.guix-profile"
-. "$GUIX_PROFILE/etc/profile"
+GUIX_PROFILE="${HOME}/.guix-profile"
+if [ -f "${GUIX_PROFILE}/etc/profile" ]; then
+    . "$GUIX_PROFILE/etc/profile"
+fi
