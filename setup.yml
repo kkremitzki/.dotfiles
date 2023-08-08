@@ -1,0 +1,42 @@
+# vim: ft=ansible
+---
+
+- name: Dotfile VM setup steps
+  hosts: all
+  become: true
+  tasks:
+    - name: Create apt proxy file
+      ansible.builtin.copy:
+        dest: /etc/apt/apt.conf.d/99apt-proxy
+        content: 'Acquire::http::Proxy "http://192.168.121.1:3142";'
+    - name: Use HTTP apt sources so we can cache
+      ansible.builtin.replace:
+        path: /etc/apt/sources.list
+        regexp: 'https:'
+        replace: 'http:'
+    - name: Upgrade
+      ansible.builtin.apt:
+        upgrade: safe
+        cache_valid_time: 3600
+    - name: Autoremove & autoclean
+      ansible.builtin.apt:
+        autoremove: true
+        autoclean: true
+    - name: Install general development packages
+      ansible.builtin.apt:
+        name:
+          - stow
+          - git
+          - tmux
+          - vim-nox
+          - fzf
+          - ripgrep
+          - direnv
+          - zsh
+          - zsh-syntax-highlighting
+          - zsh-autosuggestions
+          - zsh-theme-powerlevel9k
+          - build-essential
+          - python3-venv
+
+...
