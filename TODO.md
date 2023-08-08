@@ -30,16 +30,6 @@ To fix, run:
   $ unlink .steampid
   $ ln -s .steam/steam.pid .steampid
   
-Set up to support current Ubuntu LTS host.
-Differences to keep track of:
-- need ppa:neovim-ppa/stable
-- need newer nodejs:
-  - `curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -`
-    `sudo apt-get install -y nodejs`
-  - if we have to install this nodejs, then `sudo apt install npm` will fail
-- installing ripgrep requires ovewriting package in bat:
-  - `sudo apt install ripgrep -o Dpkg::Options::="--force-overwrite"`
-
 Handle dependency of wl-clipboard without needing to pull in unnecessary
 wayland packages
 
