@@ -3,12 +3,11 @@ set -e
 
 # Use a sensible default for $HOME in case we are running through `lxc exec`
 export HOME="${HOME:-/home/$(whoami)}"
+
 # Consider moving dev_pkgs and langservers to txt files; update langservers.lua
 # to load servers table from this file instead of maintaining lists in two
 # places
-dev_pkgs="neovim python3-venv direnv fzf ripgrep stow tmux cmake golang npm \
-          fd-find bash-completion unzip tmux-themepack-jimeh zsh \
-          zsh-autosuggestions zsh-syntax-highlighting curl bat"
+dpkgs=$(cat dpkgs.txt)
 packer_repo="https://github.com/wbthomason/packer.nvim"
 packer_target="${HOME}/.local/share/nvim/site/pack/packer/start/packer.nvim"
 p10k_repo="https://github.com/romkatv/powerlevel10k"
@@ -17,8 +16,8 @@ langservers="bashls clangd cmake cssls dockerls dotls fortls html intelephense \
              jsonls lemminx pyright rust_analyzer sqlls sumneko_lua texlab \
              tsserver vimls yamlls"
 
-# shellcheck disable=SC2086 # Intended splitting of DEV_PKGS
-sudo apt-get install --yes $dev_pkgs
+# shellcheck disable=SC2086 # Intended splitting of dpkgs
+sudo apt-get install --yes $dpkgs
 [ ! -d "$packer_target" ] && \
 git clone --depth 1 "$packer_repo" "$packer_target"
 [ ! -d "$p10k_target" ] && \
