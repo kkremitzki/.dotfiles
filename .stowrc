@@ -1,2 +1,3 @@
 --ignore README.md --ignore TODO.md --ignore NOTES.md --ignore first-run.sh \
---ignore nvim-lsp.log --ignore nvim-packer.log --ignore .stowrc
+--ignore nvim-lsp.log --ignore nvim-packer.log --ignore .stowrc --ignore Dockerfile \
+--ignore test-in-docker.sh --ignore Vagrantfile --ignore setup.yml --ignore .vagrant
