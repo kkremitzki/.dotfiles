@@ -3,6 +3,9 @@
 .envrc
 .venv
 
+# Any time I'd actually want this tracked in git?
+.vagrant
+
 # Be mindful that some of these should also go into .gitignore directly
 # Perhaps only relevant for repos I plan to publish and have others use, though
 __pycache__
