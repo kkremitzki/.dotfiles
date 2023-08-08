@@ -42,3 +42,14 @@ Differences to keep track of:
 
 Handle dependency of wl-clipboard without needing to pull in unnecessary
 wayland packages
+
+Development deploys with multiple tools: Docker, LXD, Vagrant, as reasonable,
+for bookworm & sid.
+
+Separate meta-development stuff like the Vagrantfile and the dotfiles
+themselves, so for example make stow-friendly dirs named "omnibus", and maybe
+one that is "minimal", one that is "default"
+
+In vagrant env, after setup, running `zsh` enters into bash shell with tmux etc
+activated (so the dotfiles took effect) but upon running `zsh` a second time we
+see the expected zsh prompt, YET `echo $SHELL` continues to report `/bin/bash`.
