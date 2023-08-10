@@ -74,7 +74,7 @@ fi
 ps1_error() {
   local e=$?
   #(( e )) && printf "$e|" # BW
-  (( e )) && printf "\033[01;31m[$e]\033[00m"  # color
+  (( e )) && printf "\033[01;31m[%s]\033[00m" "$e"  # color
   return $e
 }
 PS1+='$(ps1_error)'
@@ -127,14 +127,12 @@ if [ -f /usr/share/doc/fzf/examples/key-bindings.bash ]; then
     . /usr/share/doc/fzf/examples/key-bindings.bash
 fi
 
-GIT_PS1_SHOWDIRTYSTATE=1
-GIT_PS1_SHOWSTASHSTATE=1
-GIT_PS1_SHOWUNTRACKEDFILES=1
-GIT_PS1_SHOWCOLORHINTS=1
-GIT_PS1_DESCRIBE_STYLE="branch"
-GIT_PS1_SHOWUPSTREAM="auto git"
-
-[[ -z "$TMUX" ]] && command -v tmux && exec tmux
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWSTASHSTATE=1
+export GIT_PS1_SHOWUNTRACKEDFILES=1
+export GIT_PS1_SHOWCOLORHINTS=1
+export GIT_PS1_DESCRIBE_STYLE="branch"
+export GIT_PS1_SHOWUPSTREAM="auto git"
 
 if [ -f ~/.local/bin/terraform ]; then
     complete -C ~/.local/bin/terraform terraform
