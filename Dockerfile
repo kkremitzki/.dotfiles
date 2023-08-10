@@ -8,5 +8,4 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
   apt update && apt-get full-upgrade -y && apt-get autoremove -y && \
   apt-get install -y stow vim-nox
 
-COPY --chown=debian . /home/debian/.dotfiles
-# ENTRYPOINT ["/usr/bin/su", "-l", "debian"]
+ENTRYPOINT ["/usr/bin/su", "-l", "debian"]
