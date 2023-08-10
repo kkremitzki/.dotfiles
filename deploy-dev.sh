@@ -11,5 +11,7 @@ STOW_DIR="${1:-dev}"
 # cloned dotfiles via SSH. We could detect this and bail out early, for example
 # looking for no SSH keys present yet a `url = git@github.com:...` line in git
 # config.
-GIT_DIR="${SOURCE_DIR}/.git" git pull
+if [ -n "$(command -v git)" ]; then
+    GIT_DIR="${SOURCE_DIR}/.git" git pull
+fi
 stow -d "${SOURCE_DIR}/${STOW_DIR}" -t ~ -R .
