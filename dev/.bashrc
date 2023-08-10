@@ -140,5 +140,13 @@ if [ -f ~/.local/bin/terraform ]; then
     complete -C ~/.local/bin/terraform terraform
 fi
 
+if [ -z "$TMUX" ]; then
+   if [ -n "$(command -v tmux)" ]; then
+       exec tmux
+   fi
+fi
+
 # Initialize direnv; must be at end
-[ -n "$(command -v direnv)" ] && eval "$(direnv hook bash)"
+if [ -n "$(command -v direnv)" ]; then
+    eval "$(direnv hook bash)"
+fi
