@@ -1,5 +1,6 @@
 #!/bin/sh
-SOURCE_DIR=$(dirname "$0")
+# Find containing scripts directory and go up one level
+SOURCE_DIR="$(dirname "$0")"/..
 # Resolve e.g. `.` to an absolute path
 SOURCE_DIR=$(cd "${SOURCE_DIR}" || exit; pwd)
 TARGET_DIR=/home/debian/.dotfiles
