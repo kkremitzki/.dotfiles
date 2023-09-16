@@ -4,6 +4,7 @@ return require('packer').startup(function(use)
   use 'tpope/vim-fugitive'
   use {
     'lewis6991/gitsigns.nvim',
+    tag = 'v0.6',
     config = function()
       require('gitsigns').setup{
         on_attach = function(bufnr)
