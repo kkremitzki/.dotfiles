@@ -11,6 +11,16 @@ STOW_DIR="${1:-dev}"
 # cloned dotfiles via SSH. We could detect this and bail out early, for example
 # looking for no SSH keys present yet a `url = git@github.com:...` line in git
 # config.
+
+DISTFILES="${HOME}/.bashrc ${HOME}/.config/kxkbrc"
+for f in ${DISTFILES}; do
+  echo "Checking for common distribution file ${f}"
+  if [ ! -L "${f}" ] && [ -f "${f}" ]; then
+    echo "Moving ${f} to ${f}.dist"
+    mv "${f}" "${f}.dist"
+  fi
+done
+
 if [ -n "$(command -v git)" ]; then
     GIT_DIR="${SOURCE_DIR}/.git" git pull
 fi
