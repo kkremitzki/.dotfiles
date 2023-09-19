@@ -119,8 +119,3 @@ if [ -f ~/.local/bin/terraform ]; then
 fi
 
 autoload -U +X bashcompinit && bashcompinit
-
-GUIX_PROFILE="${HOME}/.guix-profile"
-if [ -f "${GUIX_PROFILE}/etc/profile" ]; then
-    . "$GUIX_PROFILE/etc/profile"
-fi
