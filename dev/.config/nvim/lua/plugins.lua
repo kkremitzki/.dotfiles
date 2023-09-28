@@ -59,7 +59,8 @@ return require('packer').startup(function(use)
         "clangd",
         "cmake",
         "cssls",
-        "fennel_language_server",
+        -- requires newer `cargo` than debian's
+        -- "fennel_language_server",
         "fortls",
         "html",
         "intelephense",
