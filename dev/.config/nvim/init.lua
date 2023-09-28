@@ -1,4 +1,4 @@
-vim.opt.background = 'dark'
+vim.opt.background = 'light'
 vim.opt.termguicolors = true
 
 -- bootstrap packer.nvim
