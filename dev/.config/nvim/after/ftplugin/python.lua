@@ -1,2 +1,3 @@
-vim.opt.makeprg = '/usr/bin/env python3 %'
-vim.keymap.set('n', '<F5>', '<cmd>make<CR>', {noremap = true})
+vim.keymap.set('n', '<F5>',
+  '<cmd>5split +terminal\\ python3\\ -i\\ %<CR>',
+  {noremap = true})
