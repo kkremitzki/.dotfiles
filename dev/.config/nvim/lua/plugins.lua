@@ -267,6 +267,7 @@ return require('packer').startup(function(use)
 
   use {
     'folke/tokyonight.nvim',
+    tag = 'v2.4.0',
     config = function()
       require("tokyonight").setup({
         style = "day",
