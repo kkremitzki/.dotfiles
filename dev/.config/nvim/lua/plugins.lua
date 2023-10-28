@@ -266,6 +266,11 @@ return require('packer').startup(function(use)
   }
 
   use {
+    "windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+  }
+
+  use {
     'folke/tokyonight.nvim',
     tag = 'v2.4.0',
     config = function()
