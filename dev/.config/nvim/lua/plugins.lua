@@ -271,6 +271,14 @@ return require('packer').startup(function(use)
   }
 
   use {
+    "https://gitlab.com/itaranto/plantuml.nvim",
+    tag = "*",
+    config = function() require('plantuml').setup() end
+  }
+
+  use 'aklt/plantuml-syntax'
+
+  use {
     'folke/tokyonight.nvim',
     tag = 'v2.4.0',
     config = function()
