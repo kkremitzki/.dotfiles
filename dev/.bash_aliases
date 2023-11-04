@@ -30,3 +30,7 @@ if [ -x /usr/bin/dircolors ]; then
 
     alias ip='ip --color=auto'
 fi
+
+if [ -x /usr/bin/fdfind ]; then
+    alias fd=/usr/bin/fdfind
+fi
