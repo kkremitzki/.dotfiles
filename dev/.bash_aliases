@@ -10,11 +10,16 @@ alias vco='sudo virsh console'
 alias nvd='nvim -c VimwikiMakeDiaryNote'
 
 mcd () {
-    mkdir -p "$1" && cd "$1"
+    mkdir -p "$1" && cd "$1" || return
 }
 
 if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    if [ -r ~/.dircolors ]; then
+        eval "$(dircolors -b ~/.dircolors)"
+    else
+        eval "$(dircolors -b)"
+    fi
+
     alias ls='ls --color=auto --group-directories-first'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
