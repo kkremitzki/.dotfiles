@@ -279,6 +279,12 @@ return require('packer').startup(function(use)
   use 'aklt/plantuml-syntax'
 
   use {
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.1',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+
+  use {
     'folke/tokyonight.nvim',
     tag = 'v2.4.0',
     config = function()
