@@ -1,5 +1,12 @@
 # Initialize tmux first, if we haven't
-[[ -z "$TMUX" ]] && command -v tmux &>/dev/null && exec tmux
+# Check for interactive shell and existing tmux session
+if [[ $- =~ i ]] && [ -z "${TMUX}" ]; then
+    # Check if we have tmux command available
+    if command -v tmux &>/dev/null; then
+        # Don't exec but run directly for VS Code compat
+        tmux
+    fi
+fi
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
