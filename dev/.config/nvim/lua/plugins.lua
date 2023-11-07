@@ -270,6 +270,7 @@ return require('packer').startup(function(use)
     config = function() require("nvim-autopairs").setup {} end
   }
 
+  -- requires git-lfs in addition to plantuml
   use {
     "https://gitlab.com/itaranto/plantuml.nvim",
     tag = "*",
