@@ -1,5 +1,5 @@
-This place is not a place of honor... no highly esteemed deed is commemorated
-here... nothing valued is here.
+# Intro
 
-What is here was dangerous and repulsive to us. This message is a warning about
-danger. 
+Dotfiles targeting a multi-language development environment running on
+[Debian stable](https://wiki.debian.org/DebianStable) with compatibility for
+macOS and Windows.
