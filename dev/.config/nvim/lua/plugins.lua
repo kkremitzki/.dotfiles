@@ -311,7 +311,7 @@ return require('packer').startup(function(use)
     tag = 'v2.4.0',
     config = function()
       require("tokyonight").setup({
-        style = "day",
+        style = "night",
         transparent = true,
         on_colors = function(colors)
           -- Use the 'day' theme color for line numbers so they're legible
