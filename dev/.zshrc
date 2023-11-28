@@ -3,8 +3,10 @@
 if [[ $- =~ i ]] && [ -z "${TMUX}" ]; then
     # Check if we have tmux command available
     if command -v tmux &>/dev/null; then
-        # Don't exec but run directly for VS Code compat
-        tmux
+        # Check for VS Code shell environment resolution
+        if ! pstree -s $$ | grep -wq code; then
+            exec tmux
+        fi
     fi
 fi
 
