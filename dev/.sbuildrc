@@ -22,7 +22,7 @@ $purge_build_deps = 'successful';
 # Directory for writing build logs to
 $log_dir=$ENV{HOME}."/Desktop/.sbuildlogs";
 
-$run_lintian = 1;
+$run_lintian = 0;
 $lintian_opts = ['-i', '-I'];
 
 #$run_piuparts = 1;
