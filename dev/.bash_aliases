@@ -9,7 +9,7 @@ alias vsh='sudo virsh shutdown'
 alias vco='sudo virsh console'
 alias nvd='nvim -c VimwikiMakeDiaryNote'
 
-mcd () {
+mkcd () {
     mkdir -p "$1" && cd "$1" || return
 }
 
