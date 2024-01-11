@@ -132,8 +132,8 @@ if command -v direnv &>/dev/null; then
     eval "$(direnv hook zsh)"
 fi
 
-if [ -f ~/.local/bin/terraform ]; then
-    complete -o nospace -C ~/.local/bin/terraform terraform
+if command -v terraform &>/dev/null; then
+    complete -o nospace -C $(command -v terraform) terraform
 fi
 
 if command -v doctl &>/dev/null; then
