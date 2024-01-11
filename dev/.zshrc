@@ -136,4 +136,9 @@ if [ -f ~/.local/bin/terraform ]; then
     complete -o nospace -C ~/.local/bin/terraform terraform
 fi
 
+if command -v doctl &>/dev/null; then
+    source <(doctl completion zsh)
+    compdef _doctl doctl
+fi
+
 autoload -U +X bashcompinit && bashcompinit
