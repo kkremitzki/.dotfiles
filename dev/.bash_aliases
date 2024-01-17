@@ -18,7 +18,7 @@ mkenv () {
         echo The .envrc file already exists. Exiting.
         return 1
     else
-        python3 -m venv .venv && python_envrc > .envrc && direnv allow
+        python3 -m venv .venv && print_python_envrc > .envrc && direnv allow
     fi
 }
 
@@ -34,7 +34,7 @@ rmenv () {
             echo The .venv dir does not appear to be a Python virtualenv.
         fi
     fi
-    # Only remove .envrc if its contents match python_envrc output
+    # Only remove .envrc if its contents match print_python_envrc output
     if [ -f .envrc ]; then
         if [ "$(print_python_envrc)" = "$(cat .envrc)" ]; then
             rm .envrc
