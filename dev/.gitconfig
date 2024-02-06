@@ -37,3 +37,9 @@
 	process = git-lfs filter-process
 [cinnabar]
 	version-check = 1702783446
+[tar "tar.zst"]
+	command = zstd -c
+[tar "tar.bz2"]
+	command = bzip2 -c
+[tar "tar.xz"]
+	command = xz -c
