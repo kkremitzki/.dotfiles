@@ -85,13 +85,14 @@ if [ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
     source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
-# File locations used by Homebrew; hardcoded version for now
-if [ -f /usr/local/Cellar/fzf/0.42.0/shell/completion.zsh ]; then
-    source /usr/local/Cellar/fzf/0.42.0/shell/completion.zsh
-fi
-
-if [ -f /usr/local/Cellar/fzf/0.42.0/shell/key-bindings.zsh ]; then
-    source /usr/local/Cellar/fzf/0.42.0/shell/key-bindings.zsh
+# File locations used by Homebrew
+if [ -d /usr/local/Cellar/fzf ]; then
+    if [ -f /usr/local/Cellar/fzf/*/shell/completion.zsh ]; then
+        source /usr/local/Cellar/fzf/*/shell/completion.zsh
+    fi
+    if [ -f /usr/local/Cellar/fzf/*/shell/key-bindings.zsh ]; then
+        source /usr/local/Cellar/fzf/*/shell/key-bindings.zsh
+    fi
 fi
 
 if [ -f /usr/share/doc/fzf/examples/completion.zsh ]; then
