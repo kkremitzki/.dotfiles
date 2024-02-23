@@ -3,8 +3,8 @@
 if [[ $- =~ i ]] && [ -z "${TMUX}" ]; then
     # Check if we have tmux command available
     if command -v tmux &>/dev/null; then
-        # Check for VS Code shell environment resolution
-        if ! pstree -s $$ | grep -wq code; then
+        # Check for VS Code & IntelliJ shell environment resolution
+        if ! pstree -s $$ | grep -wq code && [ -z "${INTELLIJ_ENVIRONMENT_READER}" ]; then
             exec tmux
         fi
     fi
