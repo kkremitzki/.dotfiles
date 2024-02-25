@@ -107,6 +107,10 @@ if [ -f ~/.bash_aliases ]; then
     source ~/.bash_aliases
 fi
 
+if [ -f ~/.config/kdesrc-buildrc.zsh ]; then
+    source ~/.config/kdesrc-buildrc.zsh
+fi
+
 # Hacky solution for lxd completion, can we do better?
 if [ -f /usr/local/go/src/github.com/lxc/lxd/scripts/bash/lxd-client ]; then
     # Normally available in bash...
