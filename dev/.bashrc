@@ -144,6 +144,10 @@ if [ -z "$TMUX" ]; then
    fi
 fi
 
+if [ -f ~/.cargo/env ]; then
+    . ~/.cargo/env
+fi
+
 # Initialize direnv; must be at end
 if [ -n "$(command -v direnv)" ]; then
     eval "$(direnv hook bash)"
