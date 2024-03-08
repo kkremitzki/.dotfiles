@@ -43,3 +43,5 @@
 	command = bzip2 -c
 [tar "tar.xz"]
 	command = xz -c
+[credential "https://codeberg.org"]
+	helper = !fjo auth git-credential
