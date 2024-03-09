@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 if [ -f .venv/bin/activate ]; then
-    echo "Activating venv."
     . .venv/bin/activate
     export VENV_PS1="$(echo \"${PS1}\" | xargs)"
     unset PS1

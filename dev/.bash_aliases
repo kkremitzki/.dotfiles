@@ -7,18 +7,14 @@ alias vsh='sudo virsh shutdown'
 alias vco='sudo virsh console'
 alias nvd='nvim -c VimwikiMakeDiaryNote'
 
-print_python_envrc () {
-    # Output the contents needed for direnv to manage Python virtualenvs.
-    printf "source .venv/bin/activate\nexport VENV_PS1=\"\$(echo \${PS1} | xargs)\"\nunset PS1\n"
-}
-
 mkenv () {
+    if [ ! -d .venv ]; then
+        python3 -m venv .venv
+    fi
     # Check before clobbering .envrc
-    if [ -f .envrc ]; then
-        echo The .envrc file already exists. Exiting.
-        return 1
-    else
-        python3 -m venv .venv && print_python_envrc > .envrc && direnv allow
+    if [ ! -f .envrc ]; then
+        echo > .envrc
+        direnv allow
     fi
 }
 
