@@ -57,6 +57,14 @@ if command -v dircolors &>/dev/null; then
     eval "$(dircolors -b)"
 fi
 
+# Special-case handling for homebrew
+if command -v gdircolors &>/dev/null; then
+    eval "$(gdircolors -b)"
+
+    alias ls='ls --color=always'
+    alias grep='grep --color=always'
+fi
+
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
