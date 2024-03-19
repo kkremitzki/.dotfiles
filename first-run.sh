@@ -28,11 +28,13 @@ stow -R .
 # sudo update-alternatives --set editor /usr/bin/nvim
 # sudo update-alternatives --set vim /usr/bin/nvim
 # sudo update-alternatives --set vi /usr/bin/nvim
-nvim --headless -c "autocmd User PackerComplete quitall" -c "PackerClean" >> nvim-packer.log 2>&1
-echo >> nvim-packer.log
-nvim --headless -c "autocmd User PackerComplete quitall" -c "PackerSync" >> nvim-packer.log 2>&1
-echo >> nvim-packer.log
-nvim --headless -c "TSUpdate" +q >> nvim-packer.log 2>&1
-echo >> nvim-packer.log
-nvim --headless -c "LspInstall --sync ${langservers}" -c q >> nvim-lsp.log 2>&1
-echo >> nvim-lsp.log
+{
+    nvim --headless -c "autocmd User PackerComplete quitall" -c "PackerClean"  2>&1;
+    echo;
+    nvim --headless -c "autocmd User PackerComplete quitall" -c "PackerSync" 2>&1;
+    echo;
+    nvim --headless -c "TSUpdate" +q 2>&1;
+    echo;
+    nvim --headless -c "LspInstall --sync ${langservers}" -c q 2>&1;
+    echo;
+} >> nvim-packer.log
