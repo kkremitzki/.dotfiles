@@ -13,7 +13,8 @@ mkenv () {
     fi
     # Check before clobbering .envrc
     if [ ! -f .envrc ]; then
-        echo > .envrc
+        # Create a 0-size file
+        touch .envrc
         direnv allow
     fi
 }
@@ -29,14 +30,19 @@ rmenv () {
         else
             echo The .venv dir does not appear to be a Python virtualenv.
         fi
+    else
+        echo "No virtualenv directory detected."
     fi
     # Only remove .envrc if its contents match print_python_envrc output
     if [ -f .envrc ]; then
-        if [ "$(print_python_envrc)" = "$(cat .envrc)" ]; then
+        # Check if it's our empty 0-size file
+        if [ ! -s .envrc ]; then
             rm .envrc
         else
-            echo The .envrc file does not match expected python venv content.
+            echo "Non-default .envrc not removed."
         fi
+    else
+        echo "No envrc file detected."
     fi
 }
 
