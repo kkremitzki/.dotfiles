@@ -1,0 +1,21 @@
+name: Dotfile linting
+run-name: ${{ github.actor }} is linting dotfiles
+on: [workflow_dispatch, push]
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  Lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: nschloe/action-cached-lfs-checkout@v1
+
+      - uses: awalsh128/cache-apt-pkgs-action@latest
+        with:
+          packages: shellcheck
+          execute_install_scripts: true
+          version: 1.0
+
+      - name: Lint shell scripts
+        run: find . -name '*.sh' -exec shellcheck {} \;
