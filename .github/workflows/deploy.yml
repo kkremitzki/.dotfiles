@@ -1,6 +1,6 @@
 name: Dotfile deployment
 run-name: ${{ github.actor }} is deploying dotfiles
-on: [workflow_dispatch, push]
+on: [workflow_dispatch]
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
