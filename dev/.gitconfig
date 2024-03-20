@@ -45,3 +45,5 @@
 	command = xz -c
 [credential "https://codeberg.org"]
 	helper = !fjo auth git-credential
+[push]
+	autoSetupRemote = true
