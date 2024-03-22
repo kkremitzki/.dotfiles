@@ -12,7 +12,7 @@
 [url "git+ssh://kkremitzki@git.launchpad.net/"]
     insteadof = lp:
 [merge]
-	conflictStyle = diff3
+	conflictStyle = zdiff3
 [alias]
 	bla = branch --list --all
 	bl = branch --list
