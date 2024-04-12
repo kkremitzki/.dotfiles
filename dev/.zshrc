@@ -153,14 +153,14 @@ if [ -f /usr/share/bash-completion/completions/lxc ]; then
     source /usr/share/bash-completion/completions/lxc
 fi
 
-if [ -f /usr/share/bash-completion/completions/incus ]; then
+if [ -f /usr/share/zsh/vendor-completions/_incus ]; then
     # Normally available in bash...
     _have()
     {
         PATH=$PATH:/usr/sbin:/sbin:/usr/local/sbin type $1 &>/dev/null
     }
 
-    source /usr/share/bash-completion/completions/incus
+    source /usr/share/zsh/vendor-completions/_incus
 fi
 
 if command -v direnv &>/dev/null; then
