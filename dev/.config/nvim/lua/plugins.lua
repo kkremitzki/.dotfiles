@@ -340,6 +340,13 @@ return require('packer').startup(function(use)
               hide_fillchars = true,
               borderless_telescope = true,
               terminal_colors = true,
+
+              theme = {
+                  highlights = {
+                      LineNr = { fg = "#a8aecb" },
+                  },
+              },
+
           })
           vim.cmd("colorscheme cyberdream") -- set the colorscheme
       end,
