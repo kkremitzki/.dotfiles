@@ -269,7 +269,13 @@ return require('packer').startup(function(use)
 
   use {
     "windwp/nvim-autopairs",
-    config = function() require("nvim-autopairs").setup {} end
+    config = function()
+      local autopairs = require('nvim-autopairs')
+      -- local cond = require('nvim-autopairs.conds')
+      -- autopairs.get_rules("'")[1].not_filetypes = { "scheme", "lisp" }
+      -- autopairs.get_rules("'")[1]:with_pair(cond.not_after_text("["))
+      autopairs.setup{}
+    end
   }
 
   -- requires git-lfs in addition to plantuml
@@ -320,8 +326,23 @@ return require('packer').startup(function(use)
           colors.fg_gutter = "#a8aecb"
         end
       })
-      vim.cmd[[colorscheme tokyonight]]
+      -- vim.cmd[[colorscheme tokyonight]]
     end
+  }
+
+  use {
+      "scottmckendry/cyberdream.nvim",
+      config = function()
+          require("cyberdream").setup({
+              -- Recommended - see "Configuring" below for more config options
+              transparent = true,
+              italic_comments = true,
+              hide_fillchars = true,
+              borderless_telescope = true,
+              terminal_colors = true,
+          })
+          vim.cmd("colorscheme cyberdream") -- set the colorscheme
+      end,
   }
 
   use 'pearofducks/ansible-vim'
