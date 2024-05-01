@@ -343,7 +343,7 @@ return require('packer').startup(function(use)
 
               theme = {
                   highlights = {
-                      LineNr = { fg = "#a8aecb" },
+                      LineNr = { fg = "#8a8a8a" },
                   },
               },
 
