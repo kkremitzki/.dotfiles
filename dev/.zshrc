@@ -154,12 +154,6 @@ if [ -f /usr/share/bash-completion/completions/lxc ]; then
 fi
 
 if [ -f /usr/share/zsh/vendor-completions/_incus ]; then
-    # Normally available in bash...
-    _have()
-    {
-        PATH=$PATH:/usr/sbin:/sbin:/usr/local/sbin type $1 &>/dev/null
-    }
-
     source /usr/share/zsh/vendor-completions/_incus
 fi
 
