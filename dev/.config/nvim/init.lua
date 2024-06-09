@@ -7,17 +7,18 @@ local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 local packer_url = 'https://github.com/wbthomason/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
   PACKER_BOOTSTRAP = fn.system({'git', 'clone', '--depth', '1', packer_url, install_path})
+  -- TODO: Replace this 'else' by doing some kind of reload
+else
+  require('plugins')
+  require('mappings')
+
+  vim.cmd([[
+    augroup packer_user_config
+      autocmd!
+      autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+    augroup end
+  ]])
 end
-
-require('plugins')
-require('mappings')
-
-vim.cmd([[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
-  augroup end
-]])
 
 vim.opt.number = true
 
