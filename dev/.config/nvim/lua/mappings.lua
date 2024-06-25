@@ -4,6 +4,7 @@
 -- This prevents me from having to save my changes but then close anoher tab.
 vim.api.nvim_set_keymap('n', '<Leader>ev', ':tabnew ~/.config/nvim<CR>:tcd ~/.config/nvim<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader>sv', ':source $MYVIMRC<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<F12>', '<cmd>5split +term<CR>', { noremap = true })
 
 local opts = { noremap=true, silent=true }
 -- Mappings.
