@@ -6,6 +6,14 @@ alias vss='sudo virsh start'
 alias vsh='sudo virsh shutdown'
 alias vco='sudo virsh console'
 
+function gnvd () {
+    gvim -c VimwikiMakeDiaryNote + "$@"
+}
+
+function gnvw () {
+    gvim -c VimwikiIndex "$@"
+}
+
 function nvd () {
     nvim -c VimwikiMakeDiaryNote + "$@"
 }
