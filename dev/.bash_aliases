@@ -7,7 +7,10 @@ alias vsh='sudo virsh shutdown'
 alias vco='sudo virsh console'
 
 function gnvd () {
-    gvim -c VimwikiMakeDiaryNote + "$@"
+    header_depth=6
+    header_str="$(printf %${header_depth}s | tr ' ' '=')"
+    header_str="${header_str}$(date -Iseconds)${header_str}"
+    gvim -c VimwikiMakeDiaryNote + -c "s/$/\r${header_str}/" "$@"
 }
 
 function gnvw () {
@@ -15,7 +18,10 @@ function gnvw () {
 }
 
 function nvd () {
-    nvim -c VimwikiMakeDiaryNote + "$@"
+    header_depth=6
+    header_str="$(printf %${header_depth}s | tr ' ' '=')"
+    header_str="${header_str}$(date -Iseconds)${header_str}"
+    nvim -c VimwikiMakeDiaryNote + -c "s/$/\r${header_str}/" "$@"
 }
 
 function nvw () {
