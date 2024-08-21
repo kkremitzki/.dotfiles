@@ -11,8 +11,9 @@
 	pushInsteadOf = kde:
 [url "git+ssh://kkremitzki@git.launchpad.net/"]
     insteadof = lp:
-[merge]
-	conflictStyle = zdiff3
+; disabled; doesn't work with git provided by Debian 12, the current stable release
+; [merge]
+; 	conflictStyle = zdiff3
 [alias]
 	bla = branch --list --all
 	bl = branch --list
