@@ -42,3 +42,7 @@ vim.opt.splitbelow = true
 
 -- Do not start with folds
 vim.opt.foldenable = false
+
+-- Use cursor line & column highlighting
+vim.opt.cursorline = true
+vim.opt.cursorcolumn = true
