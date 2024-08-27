@@ -314,21 +314,21 @@ return require('packer').startup(function(use)
     run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build'
   }
 
-  -- use {
-  --   'folke/tokyonight.nvim',
-  --   tag = 'v2.4.0',
-  --   config = function()
-  --     require("tokyonight").setup({
-  --       style = "night",
-  --       transparent = true,
-  --       on_colors = function(colors)
-  --         -- Use the 'day' theme color for line numbers so they're legible
-  --         colors.fg_gutter = "#a8aecb"
-  --       end
-  --     })
-  --     -- vim.cmd[[colorscheme tokyonight]]
-  --   end
-  -- }
+  use {
+    'folke/tokyonight.nvim',
+    tag = 'v2.9.0',
+    config = function()
+      require("tokyonight").setup({
+        -- style = "moon",
+        transparent = true,
+        on_colors = function(colors)
+          -- Use the 'day' theme color for line numbers so they're legible
+          colors.fg_gutter = "#a8aecb"
+        end
+      })
+      vim.cmd[[colorscheme tokyonight-moon]]
+    end
+  }
 
   use {
       "scottmckendry/cyberdream.nvim",
