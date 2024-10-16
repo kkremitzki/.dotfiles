@@ -21,6 +21,7 @@ require'nvim-treesitter.configs'.setup {
     "perl",
     "php",
     "python",
+    "ruby",
     "rust",
     "toml",
     "vim",
