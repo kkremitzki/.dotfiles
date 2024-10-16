@@ -46,3 +46,6 @@ vim.opt.foldenable = false
 -- Use cursor line & column highlighting
 vim.opt.cursorline = true
 vim.opt.cursorcolumn = true
+
+-- markdown syntax highlighting
+vim.g.markdown_fenced_languages = {'html', 'python', 'ruby', 'vim'}
