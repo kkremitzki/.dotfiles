@@ -65,7 +65,7 @@ return require('packer').startup(function(use)
         "html",
         -- TODO: this leaves around an ``~/intelephense`` directory
         -- "intelephense",
-        "jdtls",
+        -- "jdtls",
         "jsonls",
         "lemminx",
         "lua_ls",
@@ -76,10 +76,10 @@ return require('packer').startup(function(use)
         "rust_analyzer",
         "sqlls",
         "taplo",
-        "teal_ls",
+        -- "teal_ls",
         "terraformls",
         "texlab",
-        "tsserver",
+        -- "tsserver",
         "vimls",
         "yamlls",
       }
