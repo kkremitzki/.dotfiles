@@ -48,3 +48,8 @@
 	helper = !fjo auth git-credential
 [push]
 	autoSetupRemote = true
+[sendemail]
+	smtpserver = smtp.migadu.com
+	smtpuser = kurt@kwk.systems
+	smtpencryption = ssl
+	smtpserverport = 465
