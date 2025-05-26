@@ -1,5 +1,9 @@
 (list
   (channel
+    (name 'kkremitzki-guix-channel)
+    (url "https://codeberg.org/kkremitzki/guix-channel")
+    (branch "main"))
+  (channel
     (name 'nonguix)
     (url "https://codeberg.org/nonguix/nonguix-mirror.git")
     (branch "master")
