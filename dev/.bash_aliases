@@ -1,3 +1,4 @@
+alias cb="fj --host codeberg.org"
 alias udcar='sudo apt update && sudo apt full-upgrade && sudo apt autoclean && sudo apt autoremove'
 alias ssc='sudo systemctl'
 alias scu='systemctl --user'
